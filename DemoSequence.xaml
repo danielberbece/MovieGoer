@@ -48,7 +48,7 @@
       <AssemblyReference>UiPath.Mail</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="DemoSequence" sap:VirtualizedContainerService.HintSize="461.6,4583.2" sap2010:WorkflowViewState.IdRef="Sequence_2">
+  <Sequence DisplayName="DemoSequence" sap:VirtualizedContainerService.HintSize="459.2,3994.4" sap2010:WorkflowViewState.IdRef="Sequence_2">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="MovieTable" />
       <Variable x:TypeArguments="ui:Browser" Name="varBrowser" />
@@ -59,7 +59,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:OpenBrowser BrowserType="Chrome" DisplayName="Open Browser" Hidden="False" sap:VirtualizedContainerService.HintSize="439.2,52.8" sap2010:WorkflowViewState.IdRef="OpenBrowser_1" NewSession="False" Private="False" UiBrowser="[varBrowser]" Url="www.cinemacity.ro">
+    <ui:OpenBrowser BrowserType="Chrome" DisplayName="Open Browser" Hidden="False" sap:VirtualizedContainerService.HintSize="436.8,52.8" sap2010:WorkflowViewState.IdRef="OpenBrowser_1" NewSession="False" Private="False" UiBrowser="[varBrowser]" Url="www.cinemacity.ro">
       <ui:OpenBrowser.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
@@ -171,7 +171,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:OpenBrowser>
-    <Sequence DisplayName="Data Scraping" sap:VirtualizedContainerService.HintSize="439.2,1244.8" sap2010:WorkflowViewState.IdRef="Sequence_4">
+    <Sequence DisplayName="Data Scraping" sap:VirtualizedContainerService.HintSize="436.8,1244.8" sap2010:WorkflowViewState.IdRef="Sequence_4">
       <Sequence.Variables>
         <Variable x:TypeArguments="sd:DataTable" Default="[New System.Data.DataTable]" Name="ExtractDataTable" />
         <Variable x:TypeArguments="x:String" Name="outputMovies" />
@@ -250,7 +250,7 @@
       <ui:OutputDataTable DataTable="[MovieTable]" DisplayName="Output Data Table" sap:VirtualizedContainerService.HintSize="414.4,22.4" sap2010:WorkflowViewState.IdRef="OutputDataTable_1" Text="[outputMovies]" />
       <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="414.4,62.4" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="[outputMovies]" />
     </Sequence>
-    <Sequence DisplayName="Go to Movie site" sap:VirtualizedContainerService.HintSize="439.2,52.8" sap2010:WorkflowViewState.IdRef="Sequence_6">
+    <Sequence DisplayName="Go to Movie site" sap:VirtualizedContainerService.HintSize="436.8,52.8" sap2010:WorkflowViewState.IdRef="Sequence_6">
       <Sequence.Variables>
         <Variable x:TypeArguments="ui:GenericValue" Name="movieUrl" />
       </Sequence.Variables>
@@ -268,7 +268,7 @@
       <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="314.4,62.4" sap2010:WorkflowViewState.IdRef="WriteLine_2" Text="[movieUrl]" />
       <ui:NavigateTo Browser="[varBrowser]" DisplayName="Navigate To" sap:VirtualizedContainerService.HintSize="314.4,60" sap2010:WorkflowViewState.IdRef="NavigateTo_2" Url="[&quot;www.cinemacity.ro&quot; + movieUrl]" />
     </Sequence>
-    <Sequence DisplayName="Select location" sap:VirtualizedContainerService.HintSize="439.2,740" sap2010:WorkflowViewState.IdRef="Sequence_10">
+    <Sequence DisplayName="Select location" sap:VirtualizedContainerService.HintSize="436.8,740" sap2010:WorkflowViewState.IdRef="Sequence_10">
       <Sequence.Variables>
         <Variable x:TypeArguments="sd:DataTable" Name="LocationDataTable" />
         <Variable x:TypeArguments="ui:GenericValue" Name="varLocation" />
@@ -350,7 +350,7 @@
       </Sequence>
       <ui:NavigateTo Browser="[varBrowser]" DisplayName="Navigate To" sap:VirtualizedContainerService.HintSize="336.8,60" sap2010:WorkflowViewState.IdRef="NavigateTo_3" Url="[&quot;www.cinemacity.ro&quot; + varLocation]" />
     </Sequence>
-    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="439.2,310.4" sap2010:WorkflowViewState.IdRef="CommentOut_6">
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="436.8,310.4" sap2010:WorkflowViewState.IdRef="CommentOut_6">
       <ui:CommentOut.Body>
         <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="336.8,232" sap2010:WorkflowViewState.IdRef="Sequence_26">
           <sap:WorkflowViewStateService.ViewState>
@@ -376,8 +376,8 @@
         </Sequence>
       </ui:CommentOut.Body>
     </ui:CommentOut>
-    <Delay Duration="00:00:02" sap:VirtualizedContainerService.HintSize="439.2,22.4" sap2010:WorkflowViewState.IdRef="Delay_3" />
-    <Sequence DisplayName="Select hour" sap:VirtualizedContainerService.HintSize="439.2,1206.4" sap2010:WorkflowViewState.IdRef="Sequence_11">
+    <Delay Duration="00:00:02" sap:VirtualizedContainerService.HintSize="436.8,22.4" sap2010:WorkflowViewState.IdRef="Delay_3" />
+    <Sequence DisplayName="Select hour" sap:VirtualizedContainerService.HintSize="436.8,1206.4" sap2010:WorkflowViewState.IdRef="Sequence_11">
       <Sequence.Variables>
         <Variable x:TypeArguments="x:String" Name="reservSite" />
       </Sequence.Variables>
@@ -586,50 +586,6 @@
         </ui:Click>
         <Delay Duration="00:00:02" sap:VirtualizedContainerService.HintSize="314.4,22.4" sap2010:WorkflowViewState.IdRef="Delay_7" />
       </Sequence>
-    </Sequence>
-    <Sequence DisplayName="On Click Element" sap:VirtualizedContainerService.HintSize="439.2,548.8" sap2010:WorkflowViewState.IdRef="Sequence_33">
-      <sap:WorkflowViewStateService.ViewState>
-        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-        </scg:Dictionary>
-      </sap:WorkflowViewStateService.ViewState>
-      <ui:MonitorEvents ContinueOnError="{x:Null}" DisplayName="Monitor Events" sap:VirtualizedContainerService.HintSize="416.8,424" sap2010:WorkflowViewState.IdRef="MonitorEvents_1" RepeatForever="True">
-        <ui:MonitorEvents.Handler>
-          <ActivityAction x:TypeArguments="x:Object">
-            <ActivityAction.Argument>
-              <DelegateInArgument x:TypeArguments="x:Object" Name="args" />
-            </ActivityAction.Argument>
-            <Sequence DisplayName="Event handler" sap:VirtualizedContainerService.HintSize="336.8,232" sap2010:WorkflowViewState.IdRef="Sequence_32">
-              <Sequence.Variables>
-                <Variable x:TypeArguments="ui:UiElement" Name="CanvasMycanvas" />
-              </Sequence.Variables>
-              <sap:WorkflowViewStateService.ViewState>
-                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                </scg:Dictionary>
-              </sap:WorkflowViewStateService.ViewState>
-              <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'A  btnNext'" sap:VirtualizedContainerService.HintSize="314.4,107.2" sap2010:WorkflowViewState.IdRef="Click_26" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
-                <ui:Click.CursorPosition>
-                  <ui:CursorPosition Position="Center">
-                    <ui:CursorPosition.OffsetX>
-                      <InArgument x:TypeArguments="x:Int32" />
-                    </ui:CursorPosition.OffsetX>
-                    <ui:CursorPosition.OffsetY>
-                      <InArgument x:TypeArguments="x:Int32" />
-                    </ui:CursorPosition.OffsetY>
-                  </ui:CursorPosition>
-                </ui:Click.CursorPosition>
-                <ui:Click.Target>
-                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="1bd34e1fe0396f1d6ccde0ec0d3a7e34" Selector="&lt;html app='chrome.exe' htmlwindowname='București AFI Cotroceni' title='Select Seats' /&gt;&lt;webctrl id='btnNext' tag='A' /&gt;" WaitForReady="INTERACTIVE" />
-                </ui:Click.Target>
-              </ui:Click>
-            </Sequence>
-          </ActivityAction>
-        </ui:MonitorEvents.Handler>
-        <ui:MonitorEvents.Triggers>
-          <ui:ClickTrigger ClippingRegion="{x:Null}" DisplayName="Click Trigger 'CANVAS  myCanvas'" EventType="EVENT_SYNCHRONOUS" sap:VirtualizedContainerService.HintSize="314.4,107.2" sap2010:WorkflowViewState.IdRef="ClickTrigger_1" IncludeChildren="True" InformativeScreenshot="faf51c4a0474ff1b306a32f6bb89df66" KeyModifiers="None" MouseButton="BTN_LEFT" Selector="&lt;html app='chrome.exe' htmlwindowname='București AFI Cotroceni' title='Select Seats' /&gt;&lt;webctrl tag='CANVAS' /&gt;" />
-        </ui:MonitorEvents.Triggers>
-      </ui:MonitorEvents>
     </Sequence>
   </Sequence>
 </Activity>
